@@ -10,9 +10,15 @@
     box-sizing: border-box;
     color: white;
     font-family: 'Ubuntu', sans-serif;
+    /* overflow: hidden; */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 #wrapper {
+    content: "";
     background: url('./img/bg.3.jpg')no-repeat center center/cover;
     height: 100%;
     width: 100%;
@@ -196,12 +202,200 @@
     border: 2px solid #ffffff;
     border-radius: 4px;
     display: block;
-    width: 80%;
+    width: 86%;
     margin: 14px auto;
     /* background: hsl(44 8% 45% / 1); */
     background: #151515;
     box-shadow: inset 1px 1px 0 1px white;
     outline: none;
+}
+
+/* For Moblies */
+
+@media only screen and (max-width:900px) {
+    #btn, input, textarea {
+        padding: 8px 11px;
+        /* background: red; */
+        width: 100%;
+    }
+    .main {
+        width: 100%;
+    }
+    .form {
+        /* background: red; */
+        /* margin: 0px; */
+        /* margin-left: 96px; */
+        width: 70%;
+        /* margin-right: 60px; */
+    }
+    #start {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:699px) {
+    #start, .main, .form {
+        margin: 0 auto;
+        /* padding: 0; */
+    }
+    #header {
+        height: 50px;
+    }
+    #left, #right, #middle, #navigation, #navigation ul {
+        height: 50px;
+    }
+    #logo {
+        height: 35px;
+        width: 45px;
+    }
+    .header-text {
+        padding: 0;
+        font-size: 8px;
+    }
+    #navigation ul {
+        /* align-items: center; */
+        justify-content: space-evenly;
+    }
+    #navigation ul a {
+        font-size: 0.8rem;
+    }
+    .footer{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:589px) {
+    .main {
+        padding: 10px 20px;
+    }
+    .footer {
+        font-size: 15px;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:556px) {
+    #navigation ul {
+        flex-direction: row;
+        font-size: 0.6rem;
+    }
+    #navigation ul a {
+        padding: 2px 5px;
+    }
+    #left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 4px;
+    }
+    #right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 4px;
+    }
+    .main {
+        padding: 10px 15px;
+    }
+    .footer {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:505px) {
+    #right {
+        position: absolute;
+        right: 2px;
+        width: 50px;
+    }.footer {
+        font-size: 13px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:460px) {
+    #middle {
+        /* display: none; */
+    }
+    #navigation ul a {
+        font-size: 10px;
+    }
+    #logo {
+        position: relative;
+        left: 2px;
+        margin: 2px;
+        padding: 2px 0px;
+        border: none;
+        height: 30px;
+        width: 44px;
+    }
+    #left {
+        width: 50px;
+    }
+    #call {
+        margin: 2px;
+        height: 30px;
+        width: 30px;
+    }
+    .main h1 {
+        font-size: 20px;
+    }
+    .footer {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:411px) {
+    #navigation {
+        width: 88%;
+        margin: auto;
+    }
+    #navigation ul a {
+        font-size: 9px;
+    }
+    #navigation ul li:nth-child(4) {
+        display: none;
+    }.footer {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width:365px) {
+    #navigation {
+        width: 80%;
+        margin: auto;
+    }
+    #navigation ul {
+        justify-content: center;
+    }
+    #navigation ul a {
+        font-size: 8.5px;
+    }
+}
+
+@media only screen and (max-width:294px) {
+    #navigation {
+        width: 70%;
+        margin: auto;
+    }
+    #navigaiton ul a {
+        font-size: 7px;
+    }
+    #left {
+        padding-left: 3px;
+        width: 45px;
+    }
+    #logo {
+        width: 38px;
+    }
+}
+
+@media only screen and (max-width:280px) {
+    #navigation ul li:nth-child(3) {
+        display: none;
+    }
 }
 
 #btn:hover, #gender:hover, textarea:hover, input:hover {
@@ -243,14 +437,14 @@ footer {
     border-left: none;
     border-right: none;
     border-bottom: none;
-    padding: 1rem 0;
+    padding: 1rem 20px;
 }
 
 #links-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
+    width: 100%;
     margin: 10px auto;
 }
 
