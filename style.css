@@ -17,6 +17,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    min-height: 100vh;
+}
+
 #wrapper {
     content: "";
     background: url('./img/bg.3.jpg')no-repeat center center/cover;
